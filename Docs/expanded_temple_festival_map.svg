@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1030" role="img" aria-labelledby="title desc">
+  <title id="title">Expanded temple festival map layout</title>
+  <desc id="desc">Top down planning sketch. Existing Unity objects are shown as dark markers; proposed areas are shown as colored zones. The gate leads through the market to the pond and pagoda, with new eastern festival and western garden loops, plus an overlook beyond the stairs.</desc>
+  <defs>
+    <pattern id="grid" width="115" height="92.5" patternUnits="userSpaceOnUse"><path d="M 115 0 L 0 0 0 92.5" fill="none" stroke="#dfdfd3" stroke-width="1"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#344235" flood-opacity=".14"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ae7036"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#28392f}
+      .small{font-size:15px}.tiny{font-size:12px}.zone{font-size:19px;font-weight:700}.sub{font-size:13px}
+      .existing{fill:#263c33;stroke:#fff;stroke-width:3}.planned{stroke:#fff;stroke-width:3}
+      .route{fill:none;stroke:#d29246;stroke-width:18;stroke-linecap:round;stroke-linejoin:round;opacity:.62}
+      .loop{fill:none;stroke:#c99960;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 25;opacity:.95}
+      .quiet{fill:none;stroke:#7d9b72;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 21}
+    </style>
+  </defs>
+
+  <rect width="1400" height="1030" fill="#f8f7ef"/>
+  <text x="70" y="54" font-size="31" font-weight="700">TEMPLE FESTIVAL · EXPANDED MAP</text>
+  <text x="71" y="81" font-size="16" fill="#69746a">Planning sketch based on placed scene objects · X increases right · Z increases down</text>
+  <rect x="60" y="103" width="1070" height="805" rx="24" fill="#edf0e6" stroke="#c9d1c3" stroke-width="2"/>
+  <rect x="70" y="112" width="1050" height="785" fill="url(#grid)" opacity=".75"/>
+
+  <!-- Existing built area: approximate footprint, not a property boundary. -->
+  <rect x="300" y="314" width="483" height="352" rx="34" fill="#eee6d2" opacity=".78" stroke="#8a7b61" stroke-width="3" stroke-dasharray="9 8"/>
+  <text x="318" y="343" class="small" font-weight="700" fill="#756a57">CURRENT SMALL MAP</text>
+
+  <!-- New explorable areas. -->
+  <ellipse cx="392" cy="159" rx="135" ry="49" fill="#b8c9aa" stroke="#77936d" stroke-width="3"/>
+  <text x="392" y="155" text-anchor="middle" class="zone">MOUNTAIN OVERLOOK</text>
+  <text x="392" y="178" text-anchor="middle" class="sub">quiet final view</text>
+
+  <path d="M 172 523 Q 190 452 294 432 L 358 516 Q 297 597 204 606 Z" fill="#d5dfc3" stroke="#92a978" stroke-width="3"/>
+  <text x="239" y="498" text-anchor="middle" class="zone">GARDEN</text>
+  <text x="239" y="521" text-anchor="middle" class="sub">trees + rest spot</text>
+
+  <path d="M 157 616 Q 178 569 274 563 L 318 677 Q 253 738 167 698 Z" fill="#e5d6b4" stroke="#b59a69" stroke-width="3"/>
+  <text x="232" y="634" text-anchor="middle" class="zone">CRAFT LANE</text>
+  <text x="232" y="657" text-anchor="middle" class="sub">3–4 small booths</text>
+
+  <path d="M 759 539 Q 836 505 925 547 L 1033 660 Q 961 734 819 697 Z" fill="#e6cda5" stroke="#c49a5e" stroke-width="3"/>
+  <text x="904" y="624" text-anchor="middle" class="zone">FOOD STREET</text>
+  <text x="904" y="647" text-anchor="middle" class="sub">stalls along both edges</text>
+
+  <ellipse cx="1031" cy="559" rx="87" ry="86" fill="#efd9aa" stroke="#c69d5d" stroke-width="3"/>
+  <text x="1031" y="547" text-anchor="middle" class="zone">FESTIVAL</text>
+  <text x="1031" y="571" text-anchor="middle" class="zone">PLAZA</text>
+  <text x="1031" y="594" text-anchor="middle" class="sub">open center / stage</text>
+
+  <path d="M 736 395 Q 831 360 924 418 L 975 483 Q 900 529 801 478 Z" fill="#cbd8bd" stroke="#90a982" stroke-width="3"/>
+  <text x="859" y="438" text-anchor="middle" class="zone">LANTERN GROVE</text>
+  <text x="859" y="460" text-anchor="middle" class="sub">calmer return route</text>
+
+  <ellipse cx="691" cy="807" rx="145" ry="73" fill="#dfd2b2" stroke="#b49d71" stroke-width="3"/>
+  <text x="691" y="800" text-anchor="middle" class="zone">ARRIVAL COURT</text>
+  <text x="691" y="824" text-anchor="middle" class="sub">starting view toward gate</text>
+
+  <!-- Routes under markers. -->
+  <path class="route" d="M 691 809 Q 686 711 685 629 Q 682 590 640 559 Q 591 528 570 474 Q 540 451 504 458 Q 485 427 491 363 Q 430 299 392 159"/>
+  <path class="loop" d="M 685 629 Q 831 692 909 649 Q 1003 635 1031 559 Q 1013 474 886 442 Q 753 416 570 474"/>
+  <path class="quiet" d="M 640 559 Q 470 564 335 611 Q 257 652 232 628 Q 171 587 239 502 Q 312 432 504 458"/>
+
+  <!-- Existing scene landmarks, positioned from the saved Unity scene. -->
+  <circle cx="685" cy="629" r="11" class="existing"/><text x="700" y="617" class="small" font-weight="700">GATE</text>
+  <circle cx="640" cy="559" r="11" class="existing"/><text x="654" y="554" class="small" font-weight="700">MARKET</text>
+  <circle cx="516" cy="589" r="9" class="existing"/><text x="466" y="616" class="tiny">HOUSE</text>
+  <circle cx="441" cy="508" r="9" class="existing"/><text x="385" y="532" class="tiny">HOUSE</text>
+  <ellipse cx="570" cy="474" rx="46" ry="32" fill="#80aebb" stroke="#3d7887" stroke-width="3"/><text x="570" y="478" text-anchor="middle" class="small" font-weight="700" fill="#fff">POND</text>
+  <circle cx="504" cy="458" r="12" class="existing"/><text x="451" y="445" class="small" font-weight="700">PAGODA</text>
+  <circle cx="491" cy="363" r="10" class="existing"/><text x="511" y="367" class="small" font-weight="700">STAIRS</text>
+
+  <!-- Small route direction keys. -->
+  <path d="M 680 725 L 683 704" stroke="#ae7036" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 803 679 L 825 684" stroke="#ae7036" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Coordinates and scale reference. -->
+  <text x="70" y="933" class="small">Approximate X/Z plan · current landmarks use saved object positions; proposed zones are flexible.</text>
+  <text x="84" y="888" class="tiny">X −14</text><text x="1081" y="888" class="tiny">X +32</text>
+  <text x="80" y="133" class="tiny">Z −13</text><text x="80" y="875" class="tiny">Z +30</text>
+
+  <!-- Reading key. -->
+  <rect x="1155" y="104" width="205" height="804" rx="20" fill="#fff" stroke="#d9d9ca"/>
+  <text x="1177" y="143" font-size="20" font-weight="700">MAP KEY</text>
+  <circle cx="1188" cy="181" r="9" class="existing"/><text x="1209" y="187" class="small">Existing object</text>
+  <rect x="1179" y="210" width="19" height="19" rx="5" fill="#e6cda5" stroke="#c49a5e"/><text x="1209" y="226" class="small">New festival area</text>
+  <rect x="1179" y="249" width="19" height="19" rx="5" fill="#cbd8bd" stroke="#90a982"/><text x="1209" y="265" class="small">New quiet area</text>
+  <line x1="1179" y1="302" x2="1200" y2="302" stroke="#d29246" stroke-width="8"/><text x="1209" y="307" class="small">Main route</text>
+  <line x1="1179" y1="341" x2="1200" y2="341" stroke="#c99960" stroke-width="8" stroke-dasharray="2 8"/><text x="1209" y="346" class="small">Festival loop</text>
+  <line x1="1179" y1="380" x2="1200" y2="380" stroke="#7d9b72" stroke-width="8" stroke-dasharray="2 8"/><text x="1209" y="385" class="small">Garden loop</text>
+  <line x1="1179" y1="420" x2="1200" y2="420" stroke="#8a7b61" stroke-width="3" stroke-dasharray="6 5"/><text x="1209" y="425" class="small">Current map</text>
+  <line x1="1177" y1="455" x2="1338" y2="455" stroke="#e1e1d7"/>
+  <text x="1178" y="490" font-size="18" font-weight="700">SUGGESTED FLOW</text>
+  <text x="1179" y="526" class="small">1  Arrival court</text>
+  <text x="1179" y="554" class="small">2  Existing gate</text>
+  <text x="1179" y="582" class="small">3  Existing market</text>
+  <text x="1179" y="610" class="small">4  Pond + pagoda</text>
+  <text x="1179" y="638" class="small">5  Stairs + overlook</text>
+  <text x="1178" y="695" class="sub">Explore either side loop</text>
+  <text x="1178" y="715" class="sub">before or after the</text>
+  <text x="1178" y="735" class="sub">pagoda visit.</text>
+  <line x1="1177" y1="774" x2="1338" y2="774" stroke="#e1e1d7"/>
+  <text x="1178" y="805" class="sub">Sketch only.</text>
+  <text x="1178" y="826" class="sub">Adjust zone sizes</text>
+  <text x="1178" y="847" class="sub">to fit your terrain.</text>
+  <text x="70" y="986" font-size="15" fill="#68766b">Drawn as a planning reference. No Unity scene or asset was changed.</text>
+</svg>
